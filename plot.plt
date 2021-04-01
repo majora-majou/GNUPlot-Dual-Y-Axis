@@ -28,5 +28,5 @@ set style line 12 lc rgb '#808080' lt 0 lw 1
 set grid back ls 12
 
 # Plots the data files on the appropriate axis with custom points.
-plot 'Test_Field_Probe_H.dat' lc '#800000' ps .35 pt 18 axis x1y1, 'Data3.dat' w d dt 0 axis x1y1, \
-    'Test_Fwd_Pwr_H.dat' lc '#000080' ps .35 pt 1 axis x1y2
+plot 'Data1.dat' lc '#800000' ps .35 pt 18 axis x1y1, 'Data3.dat' w d dt 0 axis x1y1, \
+    'Data2.dat' lc '#000080' ps .35 pt 1 axis x1y2
