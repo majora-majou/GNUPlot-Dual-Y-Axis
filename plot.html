@@ -1,0 +1,25 @@
+set terminal emf font "arial,10" fontscale 1.0 size 1200, 500 
+set output 'graph.emf'
+
+#set key inside left top vertical Right noreverse enhanced autotitles box linetype -1 linewidth 1.000
+#set key center top title " "
+set title "%title%"
+set ylabel "%ylabel%"
+set xlabel "%xlabel%"
+
+set grid xtics
+set grid ytics 
+set grid layerdefault linetype 0 linecolor rgb "black" linewidth 2,  linetype 0 linecolor rgb "gray" linewidth 1
+
+#_plot "%data%" title "%data_title%" with lines
+#_plot "%data%" title "%data_title%" with points
+set xrange [%xmin%:%xmax%]
+set yrange [%ymin%:%ymax%]
+#plot "%data%" title "%data_title%" with lines
+
+plot 'Test_Field_Probe_H.dat' u 1:2
+plot 'Limit.dat' u 1:2 with lines
+
+unset yrange
+set y2range [40:70]
+plot 'Test_Fwd_Pwr_H.dat' u 1:2
